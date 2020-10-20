@@ -15,12 +15,12 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
  const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#bbb',
-        alignItems: 'center',
-        margin:5,
-        padding:10,
-        flexDirection:"row",
+        // flex: 1,
+        // backgroundColor: '#bbb',
+        // alignItems: 'center',
+        // margin:5,
+        // padding:40,
+        // flexDirection:"row",
         
     }
  })

@@ -1,7 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './screens/Home';
-import Products from './screens/Products'
+import Products from './screens/Products';
+import Bateaux from './screens/Bateaux';
+import Restaurants from './screens/Restaurants';
 import ProductList from './screens/ProductList';
 import { NavigationContainer } from '@react-navigation/native';
 import {Provider} from 'react-redux'
@@ -19,6 +21,8 @@ export default function App() {
               }}>
                 <Stack.Screen name="Home" component={Home}/>
                 <Stack.Screen name="Products" component={Products}/>
+                <Stack.Screen name="Bateaux" component={Bateaux}/>
+                <Stack.Screen name="Restaurants" component={Restaurants}/>
                 <Stack.Screen name="ProductList" component={ProductList}/>
   
               </Stack.Navigator>
