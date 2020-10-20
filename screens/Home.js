@@ -4,9 +4,6 @@ import Button from "../components/Button"
 // import BackgroundImage from '../components/BackgroundImage';
 // import {images} from '../Constants/Images';
 
-
-
-
 export default function Home(props) {
   return <View style= {styles.container}> 
             <Text >Page Home</Text>
