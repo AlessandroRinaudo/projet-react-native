@@ -44,7 +44,7 @@ export default function Home(props) {
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Contact"
-            screen=""
+            screen="Contact"
             image={images.poisson.uri}
             />
 
