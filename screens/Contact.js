@@ -1,5 +1,5 @@
 import React from 'react';
-import {View , Text ,StyleSheet} from 'react-native';
+import {View , Text ,StyleSheet ,Image} from 'react-native';
 import BackgroundImage from '../components/BackgroundImage';
 import {images} from '../constants/Images';
 
@@ -10,8 +10,9 @@ export default function Contact(props) {
             <Text>Le bateau de Thibault </Text>
         </View>
         
-        <View style={{flex: 2, alignItems: 'center'}} >
-            
+        <View style={{flex: 2, alignItems: 'center'}}>
+        <Image source={images.tig.uri} />
+    
         </View>
 
         <View style={styles.contact}>
