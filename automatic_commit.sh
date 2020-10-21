@@ -1,6 +1,6 @@
 
 git pull
-git add projet.Rmd
+git add .
 printf "Voulez vous écrire un message? (o/n)\n"
 read -r messaggio
 if [ $messaggio == 'o' ]

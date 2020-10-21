@@ -7,5 +7,13 @@ const images = {
         imgName: 'poulpe',
         uri: require('../assets/poulpe.png'),
     },
+    home: {
+        imgName: 'home',
+        uri: require('../assets/homeLogo.png'),
+    },
+    cart: {
+        imgName: 'cart',
+        uri: require('../assets/cartLogo.png'),
+    },
 }
 export { images };

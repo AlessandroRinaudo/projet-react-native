@@ -25,22 +25,20 @@ render() {
             <Text style={{marginVertical : 10 , textAlign:"center"}}> Choisissez vos produits </Text>
             <Button navigation={this.props.navigation}
             text="Poisson" screen="ProductList"
-            data={this.state.data}
-            image={images.poulpe.uri}/>
+            data={this.state.data.filter(value => value.category == 0)}
+            image={images.poisson.uri}/>
             <Button style={styles.button} navigation={this.props.navigation}
             text="Coquillage" screen="ProductList"
-            data={this.state.data}
+            data={this.state.data.filter(value => value.category == 1)}
             image={images.poulpe.uri}/>
             <Button style={styles.button} navigation={this.props.navigation}
             text="Crustace" screen="ProductList"
-            data={this.state.data}
+            data={this.state.data.filter(value => value.category == 2)}
             image={images.poulpe.uri}/>
             <Button style={styles.button} navigation={this.props.navigation}
             text="promotions" screen="ProductList"
-            data={this.state.data}
+            data={this.state.data.filter(value => value.discount != 0)}
             image={images.poulpe.uri}/>
-            <Button style={styles.button} navigation={this.props.navigation}
-            text="Retour" screen="Home"/>
         </BackgroundImage>
         </View>
     }
