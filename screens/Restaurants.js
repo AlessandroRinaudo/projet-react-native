@@ -3,8 +3,21 @@ import {View , Text ,StyleSheet, Image, ImageBackground} from 'react-native';
 import Button from "../components/Button"
 import BackgroundImage from '../components/BackgroundImage';
 import {images} from '../constants/Images';
+import {restaurants} from '../constants/Restaurants';
 
 export default function Recettes(props) {
+    /*var viewRestaurant = [];
+
+	for(let i = 0; i < 5; i++){
+		viewRestaurant.push(
+            <Button style= {styles.containerButton}
+            navigation={props.navigation}
+            text={restaurants[i].name}
+            screen=""
+            image={restaurants[i].image_icon}
+            />
+		)
+	}*/
   return <BackgroundImage>
         <View style= {styles.container}> 
             <Text style= {styles.containerHomeTitle} > Restaurants partenaires</Text>
@@ -57,6 +70,7 @@ export default function Recettes(props) {
             screen=""
             image={images.poisson.uri}
             />
+            {/* {viewRestaurant} */}
             </View>
         </View>
         </BackgroundImage>
