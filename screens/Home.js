@@ -24,21 +24,21 @@ export default function Home(props) {
             navigation={props.navigation}
             text="Bateaux"
             screen="Bateaux"
-            image={images.poisson.uri}
+            image={images.ancre.uri}
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Restaurants"
             screen="Restaurants"
-            image={images.poisson.uri}
+            image={images.restaurant.uri}
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Recettes"
             screen=""
-            image={images.poisson.uri}
+            image={images.recette.uri}
             />
 
             <Button style= {styles.containerButton}
