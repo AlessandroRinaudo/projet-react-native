@@ -1,13 +1,14 @@
 import react from 'react';
 import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
+import {images} from '../constants/Images';
 
 export default class BackgroundImage extends react.Component {
     render(){
         return <View style={styles.container}>
             <Image
                 style={styles.image} 
-                source={require('../assets/background.png')} />
+                source={images.background.uri} />
             {this.props.children}
         </View>
     }

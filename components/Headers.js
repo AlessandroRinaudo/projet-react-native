@@ -1,5 +1,5 @@
 import React from 'react';
-import { View , Text ,StyleSheet } from "react-native"
+import { View , Text ,StyleSheet, Image} from "react-native"
 import Button from "../components/Button";
 import {images} from '../constants/Images';
 
@@ -8,7 +8,7 @@ export default function Headers(props){
         <Button navigation={props.navigation}
             text="" screen="Home"
             image={images.home.uri}/>
-        <Text style={styles.text}>Le bateau de Thibault</Text>
+        <Image source={images.navbar.uri}></Image>
         <Button navigation={props.navigation}
             text="" screen="Cart"
             image={images.cart.uri}/>
