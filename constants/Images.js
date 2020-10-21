@@ -1,4 +1,8 @@
 const images = {
+    background: {
+        imgName: 'background',
+        uri: require('../assets/background.png'),
+    },
     poisson: {
         imgName: 'poisson',
         uri: require('../assets/images/home/poisson.png'),
@@ -34,7 +38,11 @@ const images = {
     tig: {
         imgName: 'tig',
         uri: require('../assets/images/contact/TIG.png'),
-    }
+    },
+    navbar: {
+        imgName: 'navbar',
+        uri: require('../assets/images/product/navbarbg.png'),
+    },
 
 }
 export { images };
