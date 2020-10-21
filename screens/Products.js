@@ -22,7 +22,7 @@ render() {
   return <View style= {styles.container}> 
   <Headers  navigation={this.props.navigation}></Headers>
     <BackgroundImage>
-            <Text style={{marginVertical : 10 , textAlign:"center"}}> Choisissez vos produits </Text>
+            <Text style ={styles.displayProduit}> Choisissez vos produits </Text>
             <Button navigation={this.props.navigation}
             text="Poisson" screen="ProductList"
             data={this.state.data.filter(value => value.category == 0)}
@@ -48,6 +48,12 @@ const styles = StyleSheet.create({
         flex : 1,
         justifyContent : 'center',
         marginTop: 50,
+    },
+    displayProduit: {
+        padding:10,
+        textAlign:"center",
+        backgroundColor: "#71c1fc",
+        height:50
     },
     button: {
         height:150,

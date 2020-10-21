@@ -11,17 +11,17 @@ import Headers from "../components/Headers";
 export default class ProductsList extends React.Component {
     render() {
         let products = this.props.route.params.data ? this.props.route.params.data : [];
-  return <View style= {styles.container}> 
-    <Headers  navigation={this.props.navigation}></Headers>
-    <BackgroundImage>
-            <Text style ={{marginVertical : 10 , textAlign:"center"}}> Choisissez vos produits </Text>
-            <View style={{flex:1}}>
-            {products.map((value,index)=> {
-                return <Product key ={index} item={value}/>
-            })}
-            </View>
-            </BackgroundImage>
-         </View>
+        return <View style= {styles.container}> 
+                    <Headers  navigation={this.props.navigation}></Headers>
+                    <BackgroundImage>
+                        <Text style ={styles.displayProduit}> Choisissez vos produits </Text>
+                        <View style= {styles.buttons} >
+                        {products.map((value,index)=> {
+                            return <Product key={index} item={value}/>
+                        })}
+                        </View>
+                    </BackgroundImage>
+                </View>
     }
 }
 const styles = StyleSheet.create({
@@ -30,8 +30,17 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         marginTop: 50,
     },
-    button: {
-        height:150,
+    displayProduit: {
+        padding:10,
+        textAlign:"center",
+        backgroundColor: "#71c1fc",
+        height:50
+    },
+    buttons:{
+        marginTop:15,
+        flex:1,
+        flexDirection:"column",
+        opacity:0.5
     }
     });
 

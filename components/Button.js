@@ -1,6 +1,5 @@
 import React from 'react';
-import {View , Text ,StyleSheet, Image} from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import {View , Text ,StyleSheet, Image, TouchableOpacity} from 'react-native';
 // import { lessThan } from 'react-native-reanimated';
 
  export default function Button(props){
