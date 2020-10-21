@@ -31,6 +31,10 @@ const images = {
         imgName: 'tourteau',
         uri: require('../assets/images/home/tourteau.png'),
     },
+    tig: {
+        imgName: 'tig',
+        uri: require('../assets/images/contact/TIG.png'),
+    }
 
 }
 export { images };
