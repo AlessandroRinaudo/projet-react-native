@@ -43,6 +43,22 @@ const images = {
         imgName: 'navbar',
         uri: require('../assets/images/product/navbarbg.png'),
     },
+    delaBrise : {
+        imgName: 'delaBrise',
+        uri: require('../assets/images/bateaux/deLaBrise_icon.png'),
+    },
+    gastMicher: {
+        imgName: 'gastMicher',
+        uri: require('../assets/images/bateaux/gastMicher_icon.png'),
+    },
+    saphir: {
+        imgName: 'saphire',
+        uri: require('../assets/images/bateaux/saphir_icon.png'),
+    },
+    aquilon: {
+        imgName: 'aquilon',
+        uri: require('../assets/images/bateaux/aquilon_icon.png'),
+    },
 
 }
 export { images };

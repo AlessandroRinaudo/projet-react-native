@@ -1,37 +1,91 @@
 import React from 'react';
-import {View , Text ,StyleSheet, Image} from 'react-native';
-// import BackgroundImage from '../components/BackgroundImage';
-import Button from "../components/Button";
-import { getResources } from '../services/apirest';
-// import {images} from '../Constants/Images';
+import {View , Text ,StyleSheet, Image, ImageBackground} from 'react-native';
+import Button from "../components/Button"
+import BackgroundImage from '../components/BackgroundImage';
+import {images} from '../constants/Images';
 
+export default function Bateaux(props) {
+  return <BackgroundImage>
+        <View style= {styles.container}> 
+            <Text style= {styles.containerHomeTitle} >Nos bateaux partenaires</Text>
+            <Text style= {styles.containerHome} > Tous les eaux mènent à Thibault.</Text>
+            <Text style= {styles.containerHome} >06.63.99.99.78</Text>
+            <Text style= {styles.containerHome} >lebateaudethibauth@gmail.com </Text>
+            <Text style= {styles.containerHome} >www.facebook.com/lebateaudethibauth </Text>
+            
+            
+            <View style={styles.affichage}>
+            <Button style= {styles.containerButton}
+            navigation={props.navigation}
+            text="de la Brise"
+            screen=""
+            image={images.delaBrise.uri}
+            />
 
+            
+            <Button style= {styles.containerButton}
+            navigation={props.navigation}
+            text="Saphir"
+            screen=""
+            image={images.saphir.uri}
+            />
 
-export default class Bateaux extends React.Component {
-     state = {
-         data : []
-     }
-     componentDidMount() {
-         getResources('Bateaux').then(response=> {
-             this.setState({data:response})
-         })
-     }
-render() {
-  return <View style= {styles.container}> 
-            <Text >Page Bateaux</Text>
-            <Button navigation={this.props.navigation}
-            text="Product List" screen="ProductList"
-            data={this.state.data}/>
-            <Button navigation={this.props.navigation}
-            text="Retour" screen="Home"/>
+            <Button style= {styles.containerButton}
+            navigation={props.navigation}
+            text="Gast Micher"
+            screen=""
+            image={images.gastMicher.uri}
+            />
+
+            <Button style= {styles.containerButton}
+            navigation={props.navigation}
+            text="Aquilon"
+            screen=""
+            image={images.aquilon.uri}
+            />
+
+            <Button style= {styles.containerButton}
+            navigation={props.navigation}
+            text="Contact"
+            screen=""
+            image={images.ancre.uri}
+            />
+            
+            <Button style= {styles.containerButton}
+            navigation={props.navigation}
+            text="Contact"
+            screen=""
+            image={images.ancre.uri}
+            />
+            </View>
         </View>
-    }
+        </BackgroundImage>
 }
+
 const styles = StyleSheet.create({
     container : {
         flex : 1,
         color:'black',
         alignItems: 'center',
         justifyContent : 'center',
+       
     },
+    containerHomeTitle : {
+        fontSize:30,
+        color:'#fff',
+    } ,
+    containerButton : {
+        fontSize:30,
+        color:'#fff',
+        marginBottom:45
+    },
+    containerHome : {
+        
+    }, 
+    affichage : {
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+
 });
