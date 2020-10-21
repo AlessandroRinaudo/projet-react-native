@@ -14,6 +14,8 @@ export default function Home(props) {
             <Text style= {styles.containerHome} >06.63.99.99.78</Text>
             <Text style= {styles.containerHome} >lebateaudethibauth@gmail.com </Text>
             <Text style= {styles.containerHome} >www.facebook.com/lebateaudethibauth </Text>
+            
+            <View style={styles.affichage}>
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Produits et promotions"
@@ -48,7 +50,7 @@ export default function Home(props) {
             screen="Contact"
             image={images.poisson.uri}
             />
-
+            </View>
         </View>
         </BackgroundImage>
 }
@@ -72,5 +74,10 @@ const styles = StyleSheet.create({
     },
     containerHome : {
         
-    } 
+    },
+    affichage : {
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
 });
