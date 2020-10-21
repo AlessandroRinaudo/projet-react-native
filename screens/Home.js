@@ -1,6 +1,7 @@
 import React from 'react';
 import {View , Text ,StyleSheet, Image, ImageBackground} from 'react-native';
 import Button from "../components/Button"
+import{images} from '../constants/Images'
 // import BackgroundImage from '../components/BackgroundImage';
 // import {images} from '../Constants/Images';
 
@@ -16,11 +17,13 @@ export default function Home(props) {
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Produits et promotions"
+            image={images.poisson.uri}
             screen="Products"
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
+            image={images.ancre.uri}
             text="Bateaux"
             screen="Bateaux"
             />
