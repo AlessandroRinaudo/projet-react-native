@@ -4,47 +4,53 @@ import Button from "../components/Button"
 import BackgroundImage from '../components/BackgroundImage';
 import {images} from '../constants/Images';
 
-export default function Home(props) {
+export default function Recettes(props) {
   return <BackgroundImage>
         <View style= {styles.container}> 
-            <Text style= {styles.containerHomeTitle} > Le bateau de Thibauth</Text>
-            <Text style= {styles.containerHome} >Vente en direct de notre bateau  </Text>
-            <Text style= {styles.containerHome} >Produits selon la saison, Livraisons sur Paris  </Text>
+            <Text style= {styles.containerHomeTitle} > Nos recettes</Text>
+            <Text style= {styles.containerHome} > Toutes les recettes de Tibault</Text>
             <Text style= {styles.containerHome} >06.63.99.99.78</Text>
             <Text style= {styles.containerHome} >lebateaudethibauth@gmail.com </Text>
             <Text style= {styles.containerHome} >www.facebook.com/lebateaudethibauth </Text>
             <Button style= {styles.containerButton}
             navigation={props.navigation}
-            text="Produits et promotions"
-            screen="Products"
+            text="Homard"
+            screen=""
             image={images.poisson.uri}
             />
 
             <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Bateaux"
-            screen="Bateaux"
+            
+            text="St Jacques"
+            screen=""
             image={images.ancre.uri}
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
-            text="Restaurants"
-            screen="Restaurants"
+            text="Bar"
+            screen=""
             image={images.restaurant.uri}
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
-            text="Recettes"
+            text="Tourteau"
             screen=""
             image={images.recette.uri}
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
-            text="Contact"
-            screen="Contact"
+            text="recette"
+            screen=""
+            image={images.poisson.uri}
+            />
+            
+            <Button style= {styles.containerButton}
+            navigation={props.navigation}
+            text="recette"
+            screen=""
             image={images.poisson.uri}
             />
 

@@ -4,6 +4,7 @@ import Button from "../components/Button"
 import BackgroundImage from '../components/BackgroundImage';
 import {images} from '../constants/Images';
 
+
 export default function Home(props) {
   return <BackgroundImage>
         <View style= {styles.container}> 
@@ -37,7 +38,7 @@ export default function Home(props) {
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Recettes"
-            screen=""
+            screen="Recettes"
             image={images.recette.uri}
             />
 
