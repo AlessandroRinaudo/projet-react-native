@@ -1,14 +1,13 @@
 import React from 'react';
 import {View , Text ,StyleSheet, Image, ImageBackground} from 'react-native';
 import Button from "../components/Button"
-import{images} from '../constants/Images'
-// import BackgroundImage from '../components/BackgroundImage';
-// import {images} from '../Constants/Images';
+import BackgroundImage from '../components/BackgroundImage';
+import {images} from '../constants/Images';
 
 export default function Home(props) {
-  return <ImageBackground source={require('../assets/background.png')} style={{width:'100%',height:'100%'}}>
+  return <BackgroundImage>
         <View style= {styles.container}> 
-            <Text style= {styles.containerHomeTitle} >Le bateau de Thibauth</Text>
+            <Text style= {styles.containerHomeTitle} > Le bateau de Thibauth</Text>
             <Text style= {styles.containerHome} >Vente en direct de notre bateau  </Text>
             <Text style= {styles.containerHome} >Produits selon la saison, Livraisons sur Paris  </Text>
             <Text style= {styles.containerHome} >06.63.99.99.78</Text>
@@ -17,37 +16,40 @@ export default function Home(props) {
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Produits et promotions"
-            image={images.poisson.uri}
             screen="Products"
+            image={images.poisson.uri}
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
-            image={images.ancre.uri}
             text="Bateaux"
             screen="Bateaux"
+            image={images.poisson.uri}
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Restaurants"
             screen="Restaurants"
+            image={images.poisson.uri}
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Recettes"
             screen=""
+            image={images.poisson.uri}
             />
 
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Contact"
             screen=""
+            image={images.poisson.uri}
             />
 
         </View>
-        </ImageBackground>
+        </BackgroundImage>
 }
 
 const styles = StyleSheet.create({

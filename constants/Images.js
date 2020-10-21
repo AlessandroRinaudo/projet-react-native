@@ -9,11 +9,11 @@ const images = {
     },
     home: {
         imgName: 'home',
-        uri: require('../assets/homeLogo.png'),
+        uri: require('../assets/images/product/homeLogo.png'),
     },
     cart: {
         imgName: 'cart',
-        uri: require('../assets/cartLogo.png'),
+        uri: require('../assets/images/product/cartLogo.png'),
     },
     ancre: {
         imgName: 'ancre',
