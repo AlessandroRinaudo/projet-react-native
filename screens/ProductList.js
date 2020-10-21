@@ -1,5 +1,5 @@
 import React from 'react';
-import {View , Text ,StyleSheet} from 'react-native';
+import {View , Text ,StyleSheet ,ScrollView} from 'react-native';
 import BackgroundImage from '../components/BackgroundImage';
 import Button from "../components/Button";
 // import {images} from '../Constants/Images';
@@ -15,11 +15,13 @@ export default class ProductsList extends React.Component {
                     <Headers  navigation={this.props.navigation}></Headers>
                     <BackgroundImage>
                         <Text style ={styles.displayProduit}> Choisissez vos produits </Text>
+                        <ScrollView>
                         <View style= {styles.buttons} >
                         {products.map((value,index)=> {
                             return <Product key={index} item={value}/>
                         })}
                         </View>
+                        </ScrollView>
                     </BackgroundImage>
                 </View>
     }
