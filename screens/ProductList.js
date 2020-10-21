@@ -27,7 +27,8 @@ export default class ProductsList extends React.Component {
 const styles = StyleSheet.create({
     container : {
         flex : 1,
-        justifyContent : 'center',
+        //justifyContent : 'center',
+        justifyContent: 'space-between',
         marginTop: 50,
     },
     displayProduit: {
@@ -37,10 +38,11 @@ const styles = StyleSheet.create({
         height:50
     },
     buttons:{
-        marginTop:15,
         flex:1,
+        marginTop:15,
         flexDirection:"column",
-        opacity:0.5
+        opacity:0.5,
+        height:10
     }
     });
 

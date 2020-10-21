@@ -16,21 +16,21 @@ export default class Products extends React.Component {
             <Image style={styles.image} 
             source={images.poulpe.uri}></Image>
             <Text>{this.props.item.name} </Text>
-            <Text style= {styles.text}>{this.props.item.price} </Text>
-            <Text>€</Text>
+            <Text style= {styles.text}>{this.props.item.price}€</Text>
         </TouchableOpacity>
     }
 }
 const styles = StyleSheet.create({
     container : {
-        flex : 1,
+        //flex : 1,
         flexDirection: "row",
         padding: 10,
         margin: 5,
-        height:200,
         backgroundColor:"#bbb",
+        //justifyContent: 'space-between'
     },
     text : {
+        
     },
     image : {
         marginRight: 10,
