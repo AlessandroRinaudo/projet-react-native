@@ -12,6 +12,9 @@ export default function Recettes(props) {
             <Text style= {styles.containerHome} >06.63.99.99.78</Text>
             <Text style= {styles.containerHome} >lebateaudethibauth@gmail.com </Text>
             <Text style= {styles.containerHome} >www.facebook.com/lebateaudethibauth </Text>
+            
+            
+            <View style={styles.affichage}>
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Homard"
@@ -19,8 +22,9 @@ export default function Recettes(props) {
             image={images.poisson.uri}
             />
 
-            <Button style= {styles.containerButton}
             
+            <Button style= {styles.containerButton}
+            navigation={props.navigation}
             text="St Jacques"
             screen=""
             image={images.ancre.uri}
@@ -53,7 +57,7 @@ export default function Recettes(props) {
             screen=""
             image={images.poisson.uri}
             />
-
+            </View>
         </View>
         </BackgroundImage>
 }
@@ -77,5 +81,11 @@ const styles = StyleSheet.create({
     },
     containerHome : {
         
-    } 
+    }, 
+    affichage : {
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+
 });
