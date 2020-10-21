@@ -6,6 +6,7 @@ import Bateaux from './screens/Bateaux';
 import Restaurants from './screens/Restaurants';
 import ProductList from './screens/ProductList';
 import Cart from './screens/Cart';
+import Contact from './screens/Contact'
 import { NavigationContainer } from '@react-navigation/native';
 import {Provider} from 'react-redux'
 import store from './store/configureStore'
@@ -26,6 +27,7 @@ export default function App() {
                 <Stack.Screen name="Restaurants" component={Restaurants}/>
                 <Stack.Screen name="ProductList" component={ProductList}/>
                 <Stack.Screen name="Cart" component={Cart}/>
+                <Stack.Screen name="Contact" component={Contact}/>
   
               </Stack.Navigator>
           </NavigationContainer>
