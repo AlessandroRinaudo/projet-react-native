@@ -2,15 +2,12 @@ import React from 'react';
 import {View , Text ,StyleSheet ,Image} from 'react-native';
 import BackgroundImage from '../components/BackgroundImage';
 import {images} from '../constants/Images';
-import {ships} from '../constants/Ships';
 
-
-export default function Restaurantsaffichage(props) {
-    let restaurantData = props.route.params.data ? props.route.params.data : [];
+export default function Ships(props) {
     return  <View style = {styles.container}>
        <BackgroundImage>
         <View style={styles.title}>
-            <Text>{restaurantData.name}</Text>
+            <Text>Le bateau de Thibault </Text>
         </View>
         
         <View style={{flex: 2, alignItems: 'center'}}>
@@ -18,7 +15,7 @@ export default function Restaurantsaffichage(props) {
     
         </View>
 
-        <View style={styles.contact}>
+        <View style={styles.ships}>
             <Text>
                 06.63.99.99.78
             </Text>
@@ -55,7 +52,7 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         marginTop: 20,
     },
-    contact:{
+    ships:{
         flex: 1, 
         alignItems:'center',
         marginTop: 10,

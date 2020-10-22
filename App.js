@@ -8,6 +8,7 @@ import ProductList from './screens/ProductList';
 import Cart from './screens/Cart';
 import Contact from './screens/Contact'
 import Recettes from './screens/Recettes'
+import RestaurantsAffichage from './screens/Restaurants-affichage'
 import { NavigationContainer } from '@react-navigation/native';
 import {Provider} from 'react-redux'
 import store from './store/configureStore'
@@ -30,6 +31,7 @@ export default function App() {
                 <Stack.Screen name="Cart" component={Cart}/>
                 <Stack.Screen name="Contact" component={Contact}/>
                 <Stack.Screen name="Recettes" component={Recettes}/>
+                <Stack.Screen name="Restaurants-affichage" component={RestaurantsAffichage}/>
   
               </Stack.Navigator>
           </NavigationContainer>
