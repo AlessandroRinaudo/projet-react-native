@@ -1,31 +1,40 @@
 import react from 'react';
 import React from 'react';
 import {View , Text ,StyleSheet, Image, TouchableOpacity} from 'react-native';
-// import BackgroundImage from '../components/BackgroundImage';
-// import Button from "../components/Button";
 import {images} from '../constants/Images';
-import {Provider} from 'react-redux';
+import {connect} from 'react-redux';
+import {addProduct, removeProduct} from '../store/action/cartAction'
 
-
-
-
-export default class Products extends React.Component {
+class Product extends React.Component {
     isInCart(){
         let result = this.props.products.filter(value=>{
-            return value.name==this.props.item.name
+            return value.name==this.props.item.name;
         })
+        return result.length>0;
     }
     
     render ()
     {
-  return <TouchableOpacity style={styles.container}>
+  return <TouchableOpacity style={styles.container}
+    onPress={()=> {
+        if(!this.isInCart()) {
+            this.props.addProduct(this.props.item);
+
+        } else {
+            this.props.removeProduct(this.props.item);
+        }
+    } }
+    >
             <Image style={styles.image} 
             source={images.poulpe.uri}></Image>
             <Text>{this.props.item.name} </Text>
+            <Text>{this.isInCart()&& "\tAjouté\t"}</Text>
             <Text style= {styles.text}>{this.props.item.price}€</Text>
         </TouchableOpacity>
     }
 }
+
+
 const styles = StyleSheet.create({
     container : {
         //flex : 1,
