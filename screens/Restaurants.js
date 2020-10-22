@@ -6,18 +6,6 @@ import {images} from '../constants/Images';
 import {restaurants} from '../constants/Restaurants';
 
 export default function Recettes(props) {
-    /*var viewRestaurant = [];
-
-	for(let i = 0; i < 5; i++){
-		viewRestaurant.push(
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text={restaurants[i].name}
-            screen=""
-            image={restaurants[i].image_icon}
-            />
-		)
-	}*/
   return <BackgroundImage>
         <View style= {styles.container}> 
             <Text style= {styles.containerHomeTitle} > Restaurants partenaires</Text>
@@ -28,49 +16,20 @@ export default function Recettes(props) {
             
             
             <View style={styles.affichage}>
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Bistrot des Gascons"
-            screen=""
-            image={images.poisson.uri}
-            />
-
-            
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Les fous de L'île"
-            screen=""
-            image={images.ancre.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Bistrot Landais"
-            screen=""
-            image={images.restaurant.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Villa 9-Trois"
-            screen=""
-            image={images.recette.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Bistrot du Sommelier"
-            screen=""
-            image={images.poisson.uri}
-            />
-            
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Devenez partenaire!"
-            screen=""
-            image={images.poisson.uri}
-            />
-            {/* {viewRestaurant} */}
+                {restaurants.map((value,index)=> {
+                    return <Button style= {styles.containerButton}
+                        navigation={props.navigation}
+                        text={value.name}
+                        screen=""
+                        image={value.image_icon}
+                        />
+                })}
+                <Button style= {styles.containerButton}
+                navigation={props.navigation}
+                text="Devenez partenaire!"
+                screen=""
+                image={images.poisson.uri}
+                />
             </View>
         </View>
         </BackgroundImage>
