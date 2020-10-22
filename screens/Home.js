@@ -22,36 +22,52 @@ export default function Home(props) {
             screen="Products"
             image={images.poisson.uri}
             />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Bateaux"
-            screen="Bateaux"
-            image={images.ancre.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Restaurants"
-            screen="Restaurants"
-            image={images.restaurant.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Recettes"
-            screen="Recettes"
-            image={images.recette.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Contact"
-            screen="Contact"
-            image={images.poisson.uri}
-            />
             </View>
+        <View style={{ flexDirection : 'column'}}>
+            <View style={{ flexDirection: 'row'}}>
+                <View>
+                    <Button style= {styles.containerButton}
+                    navigation={props.navigation}
+                    text="Bateaux"
+                    screen="Bateaux"
+                    image={images.ancre.uri}
+                    />
+                </View>
+            
+                <View>
+                    <Button style= {styles.containerButton}
+                    navigation={props.navigation}
+                    text="Restaurants"
+                    screen="Restaurants"
+                    image={images.restaurant.uri}
+                    />
+                </View>
+
+            </View>
+
+            <View style={{ flexDirection: 'row'}}>
+                <View>
+                    <Button style= {styles.containerButton}
+                    navigation={props.navigation}
+                    text="Recettes"
+                    screen="Recettes"
+                    image={images.recette.uri}
+                    />
+                </View>
+            
+                <View>
+                    <Button style= {styles.containerButton}
+                    navigation={props.navigation}
+                    text="Contact"
+                    screen="Contact"
+                    image={images.poisson.uri}
+                    />
+                </View>
+            </View>
+
         </View>
+
+    </View>
         </BackgroundImage>
 }
 
