@@ -13,6 +13,28 @@ export default class ProductCarts extends React.Component {
       totalprice: (this.state.quantity * this.props.item.price)
     });
   }
+  
+  clickButon(quantity){
+    if(quantity === +1){
+      quantity = (this.state.quantity + 1)
+    }
+    if(quantity === -1){
+      if(this.state.quantity > 1){
+        quantity = (this.state.quantity - 1)
+        console.log(this.props.item)
+      }
+      else{
+        quantity = 0;
+        product.deleteProduct(this.props.item);
+        //TODO supprimer du panier
+      }
+    }
+    this.setState({
+      quantity: (quantity)
+    });
+    this.updatePrice()
+  }
+
     clickProduit(){
         Alert.alert(
           "Choisissez la quantite",
@@ -20,47 +42,31 @@ export default class ProductCarts extends React.Component {
       [
         {
           text: "1",
-          onPress: () => { this.setState({
-            quantity: (1)
-          });
-          this.updatePrice()
-        }
+          onPress: () => { this.clickButon(1)}
         },
-        { text: "2", onPress: () => { this.setState({
-            quantity: (2)
-          });
-          this.updatePrice()
-        }
+        {
+          text: "2",
+          onPress: () => { this.clickButon(2)}
         },
-        { text: "3", onPress: () => { this.setState({
-            quantity: (3)
-          });
-          this.updatePrice()
-        }
+        {
+          text: "3",
+          onPress: () => { this.clickButon(3)}
         },
-          { text: "4", onPress: () => { this.setState({
-            quantity: (4)
-          });
-          this.updatePrice()
-        }
+          {
+            text: "4",
+            onPress: () => { this.clickButon(4)}
         },
-          { text: "5", onPress: () => { this.setState({
-            quantity: (5)
-          });
-          this.updatePrice()
-        }
+          {
+            text: "5",
+            onPress: () => { this.clickButon(5)}
       },
-      { text: "Ajouter 1", onPress: () => { this.setState({
-        quantity: (this.state.quantity + 1)
-      });
-      this.updatePrice()
-    }
+      {
+        text: "Ajouter 1",
+        onPress: () => { this.clickButon(+1)}
     },
-    { text: "retirer 1", onPress: () => { this.setState({
-      quantity: (this.state.quantity - 1)
-    });
-    this.updatePrice()
-  }
+    {
+      text: "retirer 1",
+      onPress: () => { this.clickButon(-1)}
   },
       ],
       { cancelable: false }
