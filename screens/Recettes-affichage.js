@@ -9,17 +9,17 @@ export default function Recettesaffichage(props) {
     return  <View style = {styles.container}>
        <BackgroundImage>
         <View style={styles.title}>
-            <Text>{recettes.name }</Text>
+            <Text>{recetteData.name_long}</Text>
         </View>
         
         <View style={{flex: 2, alignItems: 'center'}}>
-        <Image source={recettes.images} />
+        <Image source={recetteData.image} />
     
         </View>
 
        
         <View style={{flex: 3, alignItems:'center'}}>
-            <Text>Qu'il est chaud le soleil</Text>
+            <Text>{recetteData.description}</Text>
               
         </View>
         </BackgroundImage>
