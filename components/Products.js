@@ -10,6 +10,12 @@ import {Provider} from 'react-redux';
 
 
 export default class Products extends React.Component {
+    isInCart(){
+        let result = this.props.products.filter(value=>{
+            return value.name==this.props.item.name
+        })
+    }
+    
     render ()
     {
   return <TouchableOpacity style={styles.container}>
@@ -38,3 +44,18 @@ const styles = StyleSheet.create({
         height:50
     },
 });
+
+const mapStateToProps = state => {
+    return {
+        products: state.cart.products
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        addProduct: data => {dispatch(addProduct(data));},
+        removeProduct: data => {dispatch(removeProduct(data));},
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product);
