@@ -48,7 +48,20 @@ export default class ProductCarts extends React.Component {
             quantity: (5)
           });
           this.updatePrice()
-        }}
+        }
+      },
+      { text: "Ajouter 1", onPress: () => { this.setState({
+        quantity: (this.state.quantity + 1)
+      });
+      this.updatePrice()
+    }
+    },
+    { text: "retirer 1", onPress: () => { this.setState({
+      quantity: (this.state.quantity - 1)
+    });
+    this.updatePrice()
+  }
+  },
       ],
       { cancelable: false }
     );
