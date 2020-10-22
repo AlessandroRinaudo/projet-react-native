@@ -2,7 +2,6 @@ import React from 'react';
 import {View , Text ,StyleSheet, Image, ImageBackground} from 'react-native';
 import Button from "../components/Button"
 import BackgroundImage from '../components/BackgroundImage';
-import {images} from '../constants/Images';
 import {recettes} from '../constants/Recettes';
 
 export default function Recettes(props) {

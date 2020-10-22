@@ -3,6 +3,7 @@ import {View , Text ,StyleSheet, Image, ImageBackground} from 'react-native';
 import Button from "../components/Button"
 import BackgroundImage from '../components/BackgroundImage';
 import {images} from '../constants/Images';
+import {ships} from '../constants/Ships';
 
 export default function Bateaux(props) {
   return <BackgroundImage>
@@ -15,46 +16,26 @@ export default function Bateaux(props) {
             
             
             <View style={styles.affichage}>
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="de la Brise"
-            screen=""
-            image={images.delaBrise.uri}
-            />
-
-            
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Saphir"
-            screen=""
-            image={images.saphir.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Gast Micher"
-            screen=""
-            image={images.gastMicher.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Aquilon"
-            screen=""
-            image={images.aquilon.uri}
-            />
-
+                {ships.map((value,index)=> {
+                    return <Button style= {styles.containerButton}
+                        navigation={props.navigation}
+                        text={value.name}
+                        screen="Bateaux-affichage"
+                        image={value.image_icon}
+                        data = {value}
+                        />
+                })}
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Contact"
-            screen=""
+            screen="Contact"
             image={images.ancre.uri}
             />
             
             <Button style= {styles.containerButton}
             navigation={props.navigation}
             text="Contact"
-            screen=""
+            screen="Contact"
             image={images.ancre.uri}
             />
             </View>

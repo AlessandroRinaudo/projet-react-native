@@ -4,7 +4,6 @@ import Button from "../components/Button"
 import BackgroundImage from '../components/BackgroundImage';
 import {images} from '../constants/Images';
 import {restaurants} from '../constants/Restaurants';
-// import {Restaurantsaffichage} from '../screen/Restaurants-affichage';
 
 export default function Recettes(props) {
   return <BackgroundImage>
