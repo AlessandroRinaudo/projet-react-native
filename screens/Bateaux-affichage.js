@@ -1,29 +1,24 @@
 import React from 'react';
 import {View , Text ,StyleSheet ,Image} from 'react-native';
 import BackgroundImage from '../components/BackgroundImage';
-import {images} from '../constants/Images';
 
-export default function Bateauxaffichage(props) {
+
+export default function Restaurantsaffichage(props) {
+    let bateauxData = props.route.params.data ? props.route.params.data : [];
     return  <View style = {styles.container}>
        <BackgroundImage>
         <View style={styles.title}>
-            <Text>Le bateau de Thibault </Text>
+            <Text>{bateauxData.name}</Text>
         </View>
         
         <View style={{flex: 2, alignItems: 'center'}}>
-        <Image source={images.tig.uri} />
+        <Image source={bateauxData.image} />
     
         </View>
 
         <View style={styles.contact}>
             <Text>
-                06.63.99.99.78
-            </Text>
-            <Text>
-                lebateaudethibault@gmail.com
-            </Text>
-            <Text>
-                www.facebook.com/lebateaudethibault
+                {restaurantData.subtitle}
             </Text>
         </View>
 
