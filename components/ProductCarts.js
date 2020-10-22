@@ -15,7 +15,7 @@ export default class ProductCarts extends React.Component {
   }
   
   clickButon(quantity){
-    if(quantity === +1){
+    if(quantity === "+1"){
       quantity = (this.state.quantity + 1)
     }
     if(quantity === -1){
@@ -25,7 +25,6 @@ export default class ProductCarts extends React.Component {
       }
       else{
         quantity = 0;
-        product.deleteProduct(this.props.item);
         //TODO supprimer du panier
       }
     }
@@ -62,7 +61,7 @@ export default class ProductCarts extends React.Component {
       },
       {
         text: "Ajouter 1",
-        onPress: () => { this.clickButon(+1)}
+        onPress: () => { this.clickButon("+1")}
     },
     {
       text: "retirer 1",
@@ -83,7 +82,6 @@ export default class ProductCarts extends React.Component {
             <Text>{this.props.item.name} </Text>
             <Text style= {styles.text}>{this.state.quantity} * </Text>
             <Text>{this.props.item.price}€ : </Text>
-            <Text>{this.state.quantity} </Text>
             <Text>{this.state.totalprice} €</Text>
           </TouchableOpacity>)
     }
