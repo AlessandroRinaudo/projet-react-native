@@ -5,51 +5,68 @@ import Button from '../components/Button'
 
 export default class ProductCarts extends React.Component {
     state = {
-        quantity : 1
+        quantity : 1,
+        totalprice : this.props.item.price
     }
-
+  updatePrice(){
+    this.setState({
+      totalprice: (this.state.quantity * this.props.item.price)
+    });
+  }
     clickProduit(){
         Alert.alert(
-            "Choisisser la quantite",
-      "Choisisser la quantite",
+          "Choisissez la quantite",
+          "Choisissez la quantite",
       [
         {
           text: "1",
-          onPress: () => this.setState({
+          onPress: () => { this.setState({
             quantity: (1)
-          }),
+          });
+          this.updatePrice()
+        }
         },
-        { text: "2", onPress: () =>  this.setState({
+        { text: "2", onPress: () => { this.setState({
             quantity: (2)
-          })},
-          { text: "3", onPress: () =>  this.setState({
+          });
+          this.updatePrice()
+        }
+        },
+        { text: "3", onPress: () => { this.setState({
             quantity: (3)
-          })},
-          { text: "4", onPress: () =>  this.setState({
+          });
+          this.updatePrice()
+        }
+        },
+          { text: "4", onPress: () => { this.setState({
             quantity: (4)
-          })},
-          { text: "5", onPress: () =>  this.setState({
+          });
+          this.updatePrice()
+        }
+        },
+          { text: "5", onPress: () => { this.setState({
             quantity: (5)
-          })}
-
+          });
+          this.updatePrice()
+        }}
       ],
       { cancelable: false }
     );
-
     }
     render ()
     {
-        return <TouchableOpacity style={styles.container}
+        return (<TouchableOpacity style={styles.container}
         onPress={()=> {
-            this.clickProduit();
-    
-        } }>
+          this.clickProduit();
+          }}>
             <Image style={styles.image} 
             source={images.poulpe.uri}></Image>
             <Text>{this.props.item.name} </Text>
-            <Text style= {styles.text}>{this.props.item.price}€</Text>
+            <Text style= {styles.text}>{this.state.quantity} * </Text>
+            <Text>{this.props.item.price}€ : </Text>
             <Text>{this.state.quantity} </Text>
-            </TouchableOpacity>
+            <Text>{this.state.totalprice} €</Text>
+          </TouchableOpacity>)
     }
 }
 
