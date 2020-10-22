@@ -1,5 +1,7 @@
 import React from 'react';
 import {View , Text ,StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {images} from '../constants/Images';
+
 export default class ProductCarts extends React.Component {
     render ()
     {
