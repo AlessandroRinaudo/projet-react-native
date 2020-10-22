@@ -17,7 +17,7 @@ export const recettes = [
     {
         name : "Noix de Saint-Jaques flambé au cognac",
         image : require("../assets/images/recettes/saintJacques.png"),
-        image_icon : require("../assets/images/recettes/saintJacquesRecette_icon.png"),
+        image_icon : require("../assets/images/recettes/saintJacques_icon.png"),
         description : ["Faire fondre du beurre avec des échalotes puis ajouter les noix de Saint-Jacques. Les faire revenir en laissant le milieu translucide puis les retirer du feu. ",
         "Ajouter l'ail et le persil dans la poêle et laisser cuire quelques secondes. Bien faire chauffer la poêle, puis flamber au Cognac. Une fois la flamme éteinte, ajouter les noix de Saint-Jacques (il ne faut pas les flamber car elles perdraient leur saveur).",
         "Déguster chaud nature ou accompagné d'une fondue de poireaux."],

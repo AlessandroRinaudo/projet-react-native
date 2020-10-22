@@ -9,6 +9,7 @@ import Cart from './screens/Cart';
 import Contact from './screens/Contact'
 import Recettes from './screens/Recettes'
 import RestaurantsAffichage from './screens/Restaurants-affichage'
+import RecettesAffichage from './screens/Recettes-affichage'
 import { NavigationContainer } from '@react-navigation/native';
 import {Provider} from 'react-redux'
 import store from './store/configureStore'
@@ -32,6 +33,7 @@ export default function App() {
                 <Stack.Screen name="Contact" component={Contact}/>
                 <Stack.Screen name="Recettes" component={Recettes}/>
                 <Stack.Screen name="Restaurants-affichage" component={RestaurantsAffichage}/>
+                <Stack.Screen name="Recettes-affichage" component={RecettesAffichage}/>
   
               </Stack.Navigator>
           </NavigationContainer>

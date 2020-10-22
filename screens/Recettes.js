@@ -3,6 +3,7 @@ import {View , Text ,StyleSheet, Image, ImageBackground} from 'react-native';
 import Button from "../components/Button"
 import BackgroundImage from '../components/BackgroundImage';
 import {images} from '../constants/Images';
+import {recettes} from '../constants/Recettes';
 
 export default function Recettes(props) {
   return <BackgroundImage>
@@ -15,48 +16,16 @@ export default function Recettes(props) {
             
             
             <View style={styles.affichage}>
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Homard"
-            screen=""
-            image={images.poisson.uri}
-            />
+                {recettes.map((value,index)=> {
+                    return <Button style= {styles.containerButton}
+                        navigation={props.navigation}
+                        text={value.name}
+                        screen="Recettes-affichage"
+                        image={value.image_icon}
+                        data = {value}
+                        />
+                })}
 
-            
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="St Jacques"
-            screen=""
-            image={images.ancre.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Bar"
-            screen=""
-            image={images.restaurant.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="Tourteau"
-            screen=""
-            image={images.recette.uri}
-            />
-
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="recette"
-            screen=""
-            image={images.poisson.uri}
-            />
-            
-            <Button style= {styles.containerButton}
-            navigation={props.navigation}
-            text="recette"
-            screen=""
-            image={images.poisson.uri}
-            />
             </View>
         </View>
         </BackgroundImage>

@@ -5,6 +5,7 @@ import {images} from '../constants/Images';
 import {recettes} from '../constants/Recettes'
 
 export default function Recettesaffichage(props) {
+    let recetteData = props.route.params.data ? props.route.params.data : [];
     return  <View style = {styles.container}>
        <BackgroundImage>
         <View style={styles.title}>
