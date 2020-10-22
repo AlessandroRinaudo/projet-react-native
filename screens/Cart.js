@@ -7,6 +7,7 @@ import Product from '../components/Products'
 import Headers from "../components/Headers";
 import {connect} from 'react-redux';
 import {addProduct, removeProduct} from '../store/action/cartAction'
+import ProductCarts from '../components/ProductsCarts'
 
 class Cart extends React.Component {
 render() {

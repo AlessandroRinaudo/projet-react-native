@@ -1,4 +1,4 @@
-export default class Products extends React.Component {
+export default class ProductCarts extends React.Component {
     render ()
     {
         return <TouchableOpacity style={styles.container}>
