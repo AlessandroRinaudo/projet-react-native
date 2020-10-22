@@ -1,8 +1,6 @@
 import React from 'react';
 import {View , Text ,StyleSheet ,Image} from 'react-native';
 import BackgroundImage from '../components/BackgroundImage';
-import {images} from '../constants/Images';
-import {ships} from '../constants/Ships';
 
 
 export default function Restaurantsaffichage(props) {
