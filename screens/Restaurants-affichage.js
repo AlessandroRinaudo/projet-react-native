@@ -14,19 +14,13 @@ export default function Restaurantsaffichage(props) {
         </View>
         
         <View style={{flex: 2, alignItems: 'center'}}>
-        <Image source={images.tig.uri} />
+        <Image source={restaurantData.image} />
     
         </View>
 
         <View style={styles.contact}>
             <Text>
-                06.63.99.99.78
-            </Text>
-            <Text>
-                lebateaudethibault@gmail.com
-            </Text>
-            <Text>
-                www.facebook.com/lebateaudethibault
+                {restaurantData.subtitle}
             </Text>
         </View>
 
