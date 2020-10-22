@@ -1,4 +1,4 @@
-export const restaurants = [
+export const recettes = [
     {
         name : "Bar roti a laurier frais",
         image : require("../assets/images/recettes/barRecette.png"),
