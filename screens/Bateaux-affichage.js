@@ -1,9 +1,10 @@
 import React from 'react';
 import {View , Text ,StyleSheet ,Image} from 'react-native';
 import BackgroundImage from '../components/BackgroundImage';
+// import {bateaux} from '../constants/Bateaux'
 
 
-export default function Restaurantsaffichage(props) {
+export default function Bateauxsaffichage(props) {
     let bateauxData = props.route.params.data ? props.route.params.data : [];
     return  <View style = {styles.container}>
        <BackgroundImage>
@@ -18,7 +19,7 @@ export default function Restaurantsaffichage(props) {
 
         <View style={styles.contact}>
             <Text>
-                {restaurantData.subtitle}
+                {bateauxData.subtitle}
             </Text>
         </View>
 
