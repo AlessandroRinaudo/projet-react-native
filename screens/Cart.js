@@ -10,6 +10,36 @@ import {addProduct, removeProduct} from '../store/action/cartAction'
 import ProductCarts from '../components/ProductCarts'
 
 class Cart extends React.Component {
+    state = {
+        products: [],
+        prixTotal : 0
+    }
+    productExist = false;
+    updateState (name, quantity, price) {
+        this.productExist = false;
+        this.state.products.map((value,index)=> {
+            if(value.name == name){
+                this.productExist = true;
+            }
+        })
+        if(this.productExist == false){
+            this.setState({products:[...this.state.products,{"name" : name, "quantity" : quantity, "price" : price}]})
+        }
+        else{
+            this.state.products.map((value,index)=> {
+                if(value.name == name){
+                    value.quantity = quantity;
+                }
+            })
+        }
+        this.updatePrixTotal()
+    }
+    updatePrixTotal(){
+        this.setState({prixTotal: 0})
+        this.state.products.map((value,index)=> {
+            this.setState({prixTotal: this.state.prixTotal + (value.quantity * value.price)})
+        })
+    }
 render() {
     return <View style= {styles.container}> 
                 <BackgroundImage>
@@ -17,8 +47,14 @@ render() {
                     <Text style ={styles.displayProduit}> Modifier la quantite en tapant sur chaque produits </Text>
                     <View style= {styles.buttons} >
                     {this.props.products.map((value,index)=> {
-                        return <ProductCarts key={index} item={value}/>
+                        return <ProductCarts updateParentState={this.updateState.bind(this)}
+                        key={index} item={value}/>
                     })}
+                    {this.state.products.map((value,index)=> {
+                        console.log(value)
+                        return <Text> {value.name} {value.quantity} {value.price}</Text>
+                    })}
+                    <Text> {this.state.prixTotal}</Text>
                     </View>
                 </BackgroundImage>
             </View>

@@ -12,6 +12,7 @@ export default class ProductCarts extends React.Component {
     this.setState({
       totalprice: (this.state.quantity * this.props.item.price)
     });
+    this.props.updateParentState(this.props.item.name, this.state.quantity, this.props.item.price);
   }
   
   clickButon(quantity){
