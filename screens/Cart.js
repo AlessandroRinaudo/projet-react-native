@@ -50,11 +50,7 @@ render() {
                         return <ProductCarts updateParentState={this.updateState.bind(this)}
                         key={index} item={value}/>
                     })}
-                    {this.state.products.map((value,index)=> {
-                        console.log(value)
-                        return <Text> {value.name} {value.quantity} {value.price}</Text>
-                    })}
-                    <Text> {this.state.prixTotal}</Text>
+                    <Text>Total {this.state.prixTotal} €</Text>
                     </View>
                 </BackgroundImage>
             </View>
